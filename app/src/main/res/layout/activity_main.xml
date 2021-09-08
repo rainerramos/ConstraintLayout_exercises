@@ -7,12 +7,71 @@
     tools:context=".MainActivity">
 
     <View
+        android:id="@+id/viewMenu"
         android:layout_width="0dp"
         android:layout_height="160dp"
         android:background="#855E53"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_arrow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capuccino"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@id/viewMenu"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageClock"
+        android:layout_width="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_height="60dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:src="@drawable/ic_clock"
+        app:layout_constraintRight_toLeftOf="@id/imageFavorite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewMenu" />
+
+    <ImageView
+        android:id="@+id/imageFavorite"
+        android:layout_marginTop="16dp"
+        android:layout_width="48dp"
+        android:layout_height="60dp"
+        app:layout_constraintLeft_toRightOf="@id/imageClock"
+        android:src="@drawable/ic_favorite"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewMenu" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imageClock"
+        app:layout_constraintLeft_toLeftOf="@id/imageClock"
+        app:layout_constraintRight_toRightOf="@id/imageClock"
+        android:text="15 minutos" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imageFavorite"
+        app:layout_constraintLeft_toLeftOf="@id/imageFavorite"
+        app:layout_constraintRight_toRightOf="@id/imageFavorite"
+        android:text="15 vezes" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
